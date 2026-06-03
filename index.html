@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAção Rural - Simulador ESG Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h1>EcoAção Rural</h1>
+        <p>Simulador de Sustentabilidade e ESG para Pequenas Propriedades</p>
+        <small>Concurso Agrinho 2026 — Conectando tecnologia ao futuro do campo</small>
+    </header>
+
+    <main>
+        
+        <section id="introducao">
+            <h2>Avalie a Sustentabilidade da sua Propriedade</h2>
+            <p>Responda às perguntas abaixo com base no dia a dia da sua fazenda. Nosso sistema calculará seu Score ESG e recomendará os melhores cursos gratuitos do SENAR-PR para impulsionar seu negócio!</p>
+        </section>
+
+        <section id="formulario-esg">
+            <form id="simulador-form">
+                
+                <fieldset>
+                    <legend>Módulo Ambiental (E)</legend>
+                    
+                    <div class="campo-grupo">
+                        <label for="residuos">Destinação de embalagens de agrotóxicos e resíduos veterinários (% de descarte correto):</label>
+                        <input type="number" id="residuos" min="0" max="100" placeholder="Ex: 80" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="energia">Uso de fontes de energia renovável (solar, biogás, etc.) na propriedade (% da matriz):</label>
+                        <input type="number" id="energia" min="0" max="100" placeholder="Ex: 50" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="car">A propriedade possui Cadastro Ambiental Rural (CAR) regularizado?</label>
+                        <select id="car" required>
+                            <option value="">Selecione...</option>
+                            <option value="100">Sim, totalmente regularizado</option>
+                            <option value="50">Em processo de regularização</option>
+                            <option value="0">Não regularizado / Não possui</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Módulo Social (S)</legend>
+                    
+                    <div class="campo-grupo">
+                        <label for="seguranca">Porcentagem de colaboradores (ou familiares) que utilizam EPIs adequadamente:</label>
+                        <input type="number" id="seguranca" min="0" max="100" placeholder="Ex: 90" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="capacitacao">Quantos cursos de capacitação técnica sua equipe realizou no último ano?</label>
+                        <input type="number" id="capacitacao" min="0" placeholder="Ex: 3" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Módulo de Governança (G)</legend>
+                    
+                    <div class="campo-grupo">
+                        <label for="gestao">O produtor utiliza ferramentas digitais ou planilhas para levantamento de custos?</label>
+                        <select id="gestao" required>
+                            <option value="">Selecione...</option>
+                            <option value="100">Sim, monitoramos todos os custos</option>
+                            <option value="50">Parcialmente, apenas anotações básicas</option>
+                            <option value="0">Não realizamos controle financeiro estruturado</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="nota-fiscal">Porcentagem de vendas da produção realizadas com emissão de Nota Fiscal Eletrônica (NFP-e):</label>
+                        <input type="number" id="nota-fiscal" min="0" max="100" placeholder="Ex: 100" required>
+                    </div>
+                </fieldset>
+
+                <button type="submit" id="btn-calcular">Calcular Diagnóstico ESG</button>
+            </form>
+        </section>
+
+        <section id="container-erro" class="oculto" aria-live="assertive">
+            </section>
+
+        <section id="resultado-diagnostico" class="oculto">
+            <h2>Resultado do Seu Diagnóstico</h2>
+            
+            <article id="score-card">
+                <h3>Seu Score de Sustentabilidade</h3>
+                <p id="score-pontuacao">-- pontos</p>
+                <div id="selo-status">Classificação: --</div>
+            </article>
+
+            <article id="recomendacoes-senar">
+                <h3>Plano de Ação Sustentável (Cursos Recomendados do SENAR-PR)</h3>
+                <p>Com base nos pontos fracos detectados no seu formulário, sugerimos os seguintes treinamentos gratuitos:</p>
+                <ul id="lista-cursos">
+                    </ul>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoAção Rural. Desenvolvido para o Concurso Agrinho (30 anos de transformação).</p>
+        <p>Dados de cursos baseados no catálogo oficial do <a href="https://www.sistemafaep.org.br/agrinho/" target="_blank" rel="noopener noreferrer">SENAR-PR</a>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
