@@ -1,1 +1,122 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE SISTEMA (:root) - PALETA AGRO/SUSTENTABILIDADE
+   ========================================================================== */
+:root {
+    /* Cores Principais (Alto Contraste e Temática Agro) */
+    --cor-primaria: #1b4332;       /* Verde Floresta Fechado (Sólido, Governança, Confiança) */
+    --cor-secundaria: #2d6a4f;     /* Verde Folha Médio (Identidade Visual do Agro) */
+    --cor-destaque: #52b788;       /* Verde Claro Vibrante (Ação, Links, Botões) */
+    --cor-alerta: #e63946;         /* Vermelho Amigável para Erros de Validação */
+    
+    /* Tons Neutros para Conforto Visual (UX) */
+    --fundo-pagina: #f4f7f5;       /* Off-White com toque esverdeado (Evita o cansaço do branco puro) */
+    --fundo-card: #ffffff;         /* Branco puro para destacar os formulários e resultados */
+    --texto-principal: #212529;    /* Cinza Escuro Quase Preto (Excelente contraste e leitura) */
+    --texto-mutado: #6c757d;       /* Cinza Médio para legendas e textos de apoio */
+    --borda: #d8f3dc;              /* Linha sutil de divisão */
 
+    /* Configurações de Layout */
+    --raio-borda: 8px;             /* Bordas levemente arredondadas para interface moderna */
+    --transicao: all 0.3s ease;    /* Transições suaves em hovers e focos */
+}
+
+/* ==========================================================================
+   2. RESET GLOBAL (*)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não quebrem o tamanho dos elementos */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografia limpa e profissional */
+}
+
+/* ==========================================================================
+   3. ESTILOS BASE E TIPOGRAFIA
+   ========================================================================== */
+body {
+    background-color: var(--fundo-pagina);
+    color: var(--texto-principal);
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Limitação de largura para manter o design elegante e legível */
+header, main, footer {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* ==========================================================================
+   4. CABEÇALHO (HEADER)
+   ========================================================================== */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--cor-primaria);
+    color: var(--fundo-card);
+    border-radius: var(--raio-borda);
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: var(--cor-destaque);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+header small {
+    color: var(--borda);
+    display: block;
+}
+
+/* ==========================================================================
+   5. SEÇÕES E CARDS (MAIN)
+   ========================================================================== */
+main section {
+    background-color: var(--fundo-card);
+    padding: 25px;
+    border-radius: var(--raio-borda);
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--borda);
+}
+
+#introducao h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 12px;
+}
+
+#introducao p {
+    color: var(--texto-principal);
+}
+
+/* ==========================================================================
+   6. FORMULÁRIOS E INPUTS (UX DE ENTRADA)
+   ========================================================================== */
+fieldset {
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-borda);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    padding: 0 10px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing:
